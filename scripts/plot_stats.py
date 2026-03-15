@@ -9,7 +9,7 @@ def plot_distributions(csv_input, output_plot, output_stats):
     
     # 1. (Mean & Median)
     stats_df = df[['GC_Content_Percent', 'Read_Length', 'Mean_Quality']].agg(['mean', 'median']).round(2)
-    print("--- Temel Özet İstatistikler ---")
+    print("--- Essential Statistics Summary ---")
     print(stats_df)
     
 
@@ -34,14 +34,13 @@ def plot_distributions(csv_input, output_plot, output_stats):
     axes[2].set_title('Mean Quality Score Distribution', fontsize=14)
     axes[2].set_xlabel('Phred Quality Score')
     
-    # Grafikleri sıkıştırıp estetik hale getiriyoruz ve kaydediyoruz
     plt.tight_layout()
     plt.savefig(output_plot, dpi=300)
-    print(f"Grafikler başarıyla {output_plot} konumuna kaydedildi.")
+    print(f"Graphics are succesfully saved to {output_plot} location.")
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Kullanım: python plot_stats.py <girdi.csv> <cikti_grafik.png> <cikti_istatistik.csv>")
+        print("Usage: python plot_stats.py <girdi.csv> <cikti_grafik.png> <cikti_istatistik.csv>")
         sys.exit(1)
         
     input_csv = sys.argv[1]
