@@ -62,7 +62,7 @@ The "GC Content" is at **53%**. This is very stable and follows a normal pattern
 Even though the DNA pieces are shorter than ideal, their **high accuracy** makes this data very viable. We believe the results of the alignment will be highly reliable.
 
 **Next Steps:**
-We are ready to move forward with the full alignment. You can find the visual charts (histograms) in the `results/` folder of this repository, and the automated pipeline logic in the `Snakefile`.
+We are ready to move forward with the full alignment. You can find the visual charts (histograms) `qc_plot.png` in this repository, and the automated pipeline logic in the `Snakefile`.
 
 Please let me know if you would like me to trigger the next phase of the analysis or if you have any questions regarding these metrics.
 
