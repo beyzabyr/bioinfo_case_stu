@@ -1,7 +1,6 @@
 # --- Mini-Bioinformatics Pipeline ---
 FASTQ_IN = "data/sample.fastq"
 
-# Hedeflenen tüm nihai çıktılar (Grafikler eklendi)
 rule all:
     input:
         "results/nanoplot/NanoPlot-report.html",
@@ -9,7 +8,7 @@ rule all:
         "results/qc_plots.png",
         "results/summary_stats.csv"
 
-# Süreç 1: NanoPlot
+# 1: Nanoplot
 rule run_nanoplot:
     input:
         FASTQ_IN
@@ -20,7 +19,7 @@ rule run_nanoplot:
         NanoPlot --fastq {input} -o results/nanoplot/
         """
 
-# Süreç 2: QC İstatistikleri
+#  2: QC Statistics
 rule run_custom_qc:
     input:
         script = "scripts/qc_stats.py",
@@ -32,7 +31,7 @@ rule run_custom_qc:
         python {input.script} {input.fastq} {output}
         """
 
-# Süreç 3: Görselleştirme ve Özet İstatistikler (YENİ EKLENEN ADIM)
+# Süreç 3:Visualisation and summary
 rule plot_qc:
     input:
         script = "scripts/plot_stats.py",
