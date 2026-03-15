@@ -68,6 +68,4 @@ Please let me know if you would like me to trigger the next phase of the analysi
 
 Best regards,
 
-**Beyza Bayır** 
-*Bioinformatics Analysis Specialist* 
-**Massive Bioinformatics**
+**Beyza Bayır**  *Bioinformatics Analysis Specialist*  **Massive Bioinformatics**
